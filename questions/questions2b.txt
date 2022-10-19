@@ -1,0 +1,39 @@
+Question 2b
+
+=====
+
+You are a data engineer working at an e-commerce startup.
+The company needs you to move data from a CSV file to the data warehouse (PostgreSQL).
+The data should ingest to data warehouse with full-load method.
+
+Write a executable/script that would run the following tasks:
+1a. Creating a table, if table doesn't exist in the DB. (done)
+1b. The table schema is in file "sql/schemas/user_address.json". (done)
+1c. The script must be able to automate to construct the DDL in SQL language based on schema in the file json. (done)
+1d. Print the 1c output into "sql/ddl/ddl_user_address_ddl.sql" (done)
+2. If table already exist on the DB then script should not run task for creating the table but the script should truncate the all data in the table. (done) // try and catch but not working
+3. Reading values in "temp/dataset-medium.csv" (37M 300000 rows). (done)
+4. Splitting (pagination) the data becomes 10 parts (the possible value name could be "data-part-1" until "data-part-10"). (i dont know)
+5. Inserting data into the DB with looping to insert the data per-part. (i dont know)
+6. Querying information about: total data that had already been processed per-part and last created_at from the tables. (done)
+6a. Running the query on "sql/queries/result_ingestion_user_address.sql" (the query must be created by you) (done)
+6b. Showing the result in this format "job is finish. table '{}' has {} rows and last created_at is {} from data-part-{}" (done).
+
+Data from the CSV file has following columns:
+- first name
+- last name
+- email
+- address
+- created at
+
+### postgreSQL credentials
+table_name = user_address_master
+host = localhost
+user = postgres
+pass = secret123
+db_name = shipping_orders
+###
+
+1. Write your program at answers/answer2b.txt
+2. Write it in any language.
+3. You are allow to run db PostgreSQL on docker.

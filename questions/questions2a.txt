@@ -1,0 +1,39 @@
+Question 2a
+
+=====
+
+You are a data engineer working at an e-commerce startup.
+The company needs you to move data from a CSV file to the data warehouse (PostgreSQL).
+The data should ingest to data warehouse with snapshot method.
+
+Write a executable/script that would run the following tasks:
+1a. Creating a table, if table doesn't exist in the DB.
+1b. The table schema is in file "sql/schemas/user_address.json".
+1c. The script must be able to automate to construct the DDL in SQL language based on schema in the file json.
+1d. Print the 1c output into "sql/ddl/ddl_user_address_2018_snapshots.sql"
+2. If table already exist on the DB then script should not run task for creating the table.
+3. Reading values in "temp/dataset-small.csv" (13Kb 100 rows).
+4. Filtering data between '2018-02-01' until '2018-12-31'.
+5. Inserting data into the DB based on filter data.
+6. Querying information about: total data that had already been processed and last created_at from the tables.
+6a. Running the query on "sql/queries/result_ingestion_user_address.sql" (the query must be created by you)
+6b. Showing the result in this format "job is finish. table '{}' has {} rows and last created_at is {}".
+
+Data from the CSV file has following columns:
+- first name
+- last name
+- email
+- address
+- created at
+
+### postgreSQL credentials
+table_name = user_address_2018_snapshots
+host = localhost
+user = postgres
+pass = secret123
+db_name = shipping_orders
+###
+
+1. Write your program at answers/answer2a.txt
+2. Write it in any language.
+3. You are allow to run db PostgreSQL on docker.

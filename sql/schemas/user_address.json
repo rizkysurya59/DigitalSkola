@@ -1,0 +1,37 @@
+[
+   {
+      "column_name":"first_name",
+      "column_type":"varchar(256)",
+      "is_primary_key":false,
+      "is_unique":false,
+      "is_null_able":"NOT NULL"
+   },
+   {
+      "column_name":"last_name",
+      "column_type":"varchar(256)",
+      "is_primary_key":false,
+      "is_unique":false,
+      "is_null_able":"NOT NULL"
+   },
+   {
+      "column_name":"email",
+      "column_type":"varchar(256)",
+      "is_primary_key":false,
+      "is_unique":false,
+      "is_null_able":"NOT NULL"
+   },
+   {
+      "column_name":"address",
+      "column_type":"varchar(256)",
+      "is_primary_key":false,
+      "is_unique":false,
+      "is_null_able":"NOT NULL"
+   },
+   {
+      "column_name":"created_at",
+      "column_type":"timestamp",
+      "is_primary_key":false,
+      "is_unique":false,
+      "is_null_able":"NOT NULL"
+   }
+]
